@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PengalamanController;
+use App\Http\Controllers\HobiController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,8 @@ Route::get('/', function () {
 Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 Route::get('/pengalaman', [PengalamanController::class, 'index'])->name('pengalaman');  
+Route::get('hobi/{slug}', [HobiController::class, 'show'])
+    ->name('detail');  
+
+Route::get('/hobi', [HobiController::class, 'index'])->name('hobi');
 

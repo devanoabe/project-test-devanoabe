@@ -34,9 +34,17 @@
                 </li>
                 <li class="nav-item pill-3">
                     <a style="color: white;" href="{{ route('pengalaman') }}" class="nav-link {{ (request()->routeIs('pengalaman') ? 'active' : '') }}">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fa fa-book"></i>
                         <p>
                             Pengalaman Kuliah
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item pill-3">
+                    <a style="color: white;" href="{{ route('hobi') }}" class="nav-link {{ (request()->routeIs('hobi') ? 'active' : '') }}">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Hobi
                         </p>
                     </a>
                 </li>
