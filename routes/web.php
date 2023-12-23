@@ -17,15 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('page1');
 
-Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-Route::get('/pengalaman', [PengalamanController::class, 'index'])->name('pengalaman');  
-Route::get('hobi/{slug}', [HobiController::class, 'show'])
-    ->name('detail');  
-
-Route::get('/hobi', [HobiController::class, 'index'])->name('hobi');
-
+Route::get('/page1', [HomeController::class, 'index'])->name('page1');  
+Route::get('/page2', [HomeController::class, 'index'])->name('page2');  
+Route::get('/page3', [HomeController::class, 'index'])->name('page3');  
+Route::get('/page4', [HomeController::class, 'index'])->name('page4');  
+Route::get('/page5', [HomeController::class, 'index'])->name('page5');  
+Route::get('/page6', [HomeController::class, 'index'])->name('page6');  

@@ -1,0 +1,21 @@
+nav{
+    background-color: #FF6600;
+    height: 5rem;
+}
+
+.navbar-brand, .nav-item a{
+    color: white
+}
+
+/* not active */
+.nav-pills .pill-1 .nav-link:not(.active) {
+    background-color: #FF6600;
+    color: white;
+}
+
+/* active (faded) */
+.nav-pills .pill-1 .nav-link.active {
+    background-color: #FF6600;
+    border-bottom: solid 3px #ffffff;
+    border-radius: 1px;
+}
