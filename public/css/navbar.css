@@ -1,21 +1,31 @@
-nav{
+.nav-org {
     background-color: #FF6600;
     height: 5rem;
-}
-
-.navbar-brand, .nav-item a{
-    color: white
-}
-
-/* not active */
-.nav-pills .pill-1 .nav-link:not(.active) {
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth effect */
+  }
+  
+  .navbar-brand,
+  .nav-item a {
+    color: white;
+  }
+  
+  /* Not active */
+  .nav-pills .pill-1 .nav-link:not(.active) {
     background-color: #FF6600;
     color: white;
-}
-
-/* active (faded) */
-.nav-pills .pill-1 .nav-link.active {
+  }
+  
+  /* Active (faded) */
+  .nav-pills .pill-1 .nav-link.active {
     background-color: #FF6600;
     border-bottom: solid 3px #ffffff;
     border-radius: 1px;
-}
+  }
+  
+  body.scrolled .nav-org {
+    opacity: 0;  /* Completely hide the header */
+    visibility: hidden;  /* Ensure it doesn't take up space */
+    transition: opacity 0.8s ease-in-out; /* Add transition for smooth effect */
+  }
+
+  

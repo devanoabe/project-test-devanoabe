@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="{{asset('css/navbar.css')}}">
 </head>
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg nav-org fixed-top">
     <a class="navbar-brand ml-5" href="#">SuitMedia</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,3 +45,11 @@
     </div>
 
 </nav>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.nav-org');
+        const body = document.body;
+        body.classList.toggle('scrolled', window.scrollY > 0);
+    });
+</script>
